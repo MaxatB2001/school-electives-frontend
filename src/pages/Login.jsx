@@ -19,7 +19,7 @@ export const Login = () => {
       const data = await login(email.value, password.value)
       user.setIsAuth(true)
       user.setUser(data)
-      navigate(`${USER_ROUTE}/${data.id}`)
+      navigate(USER_ROUTE)
     } catch (error) {
       console.log(error);
     }

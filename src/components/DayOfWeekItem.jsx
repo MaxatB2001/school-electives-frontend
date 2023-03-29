@@ -60,7 +60,7 @@ const DayOfWeekItem = observer(({ course, date }) => {
       </td>
       {user.user?.type === "student" && (
         <td className="px-6 py-4 font-medium">
-          {course.Grade[0].grade > 0 ? course.Grade[0].grade : null}
+          {course.Grade[0].grade > 0 || course.Grade[0].grade !== undefined ? course.Grade[0].grade : null}
         </td>
       )}
     </tr>

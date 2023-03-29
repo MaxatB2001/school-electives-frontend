@@ -32,7 +32,7 @@ export const User = observer(() => {
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-center font-normal text-4xl">Личный кабинет</h1>
-      <div className="flex space-x-4 mt-10">
+      <div className="flex space-x-4 mt-10 py-2">
         <a href={`http://localhost:5000/${user.user.image}`} className="max-w-xs">
           <img src={`http://localhost:5000/${user.user.image}`} />
         </a>

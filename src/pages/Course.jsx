@@ -16,11 +16,11 @@ export const Course = observer(() => {
   const { id } = useParams();
 
   const joinCourseHandler = () => {
-    CourseService.joinToCourse(id).then(navigate(USER_ROUTE));
+    CourseService.joinToCourse(id).then(data => navigate(USER_ROUTE));
   };
 
   const leaveCourseHandler = () => {
-    CourseService.leaveCourse(id).then(navigate(USER_ROUTE))
+    CourseService.leaveCourse(id).then(data => navigate(USER_ROUTE))
   }
 
   useEffect(() => {

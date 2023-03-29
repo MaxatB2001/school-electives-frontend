@@ -19,7 +19,7 @@ const CreateCourseModal = ({ showModal, setShowModal }) => {
     audience: 0,
     classOriented: [],
   });
-  console.log(form.classOriented);
+  console.log(time);
   const submitHandler = () => {
     const formData = new FormData();
     formData.append("name", form.name);
@@ -32,6 +32,7 @@ const CreateCourseModal = ({ showModal, setShowModal }) => {
     formData.append("classOriented", JSON.stringify(form.classOriented))
     formData.append("audience", form.audience)
     CourseService.addCourse(formData);
+    setShowModal(false)
   };
 
   return (
@@ -85,9 +86,9 @@ const CreateCourseModal = ({ showModal, setShowModal }) => {
         onChange={(e) => {
           const splitted = e.target.value.split(":");
           const time = new Date();
-          time.setHours(Number(splitted[0]) + 3);
+          time.setHours(Number(splitted[0]));
           time.setMinutes(Number(splitted[1]));
-          setTime(time.toLocaleString("ru"));
+          setTime(time);
         }}
         type="time"
       />
