@@ -6,7 +6,7 @@ import {observer} from "mobx-react-lite"
 import { useContext } from "react";
 import { Context } from "../main";
 import { useNavigate } from "react-router-dom";
-import { USER_ROUTE } from "../data/constants";
+import { COURSES_ROUTE, USER_ROUTE } from "../data/constants";
 
 export const Login = () => {
   const {user} = useContext(Context)
@@ -19,7 +19,7 @@ export const Login = () => {
       const data = await login(email.value, password.value)
       user.setIsAuth(true)
       user.setUser(data)
-      navigate(USER_ROUTE)
+      navigate(COURSES_ROUTE)
     } catch (error) {
       console.log(error);
     }

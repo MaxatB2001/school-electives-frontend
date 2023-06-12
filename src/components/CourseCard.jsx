@@ -8,7 +8,7 @@ const CourseCard = ({ course }) => {
   return (
     <div
       onClick={() => navigate(`${COURSE_ROUTE}/${course.id}`)}
-      className="cursor-pointer shadow-md hover:shadow-xl rounded-md h-full flex flex-col"
+      className="bg-white cursor-pointer shadow-md hover:shadow-xl rounded-md h-full flex flex-col"
     >
       <div>
         <img

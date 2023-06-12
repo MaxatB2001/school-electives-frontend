@@ -9,6 +9,8 @@ import { Context } from "../main";
 import CourseService from "../service/courseService";
 import { weeksBetween } from "../utils/date";
 import { isUserJoined } from "../utils/user";
+import Header from "../components/layouts/Header";
+import Footer from "../components/layouts/Footer";
 
 export const Course = observer(() => {
   const navigate = useNavigate();
@@ -34,7 +36,9 @@ export const Course = observer(() => {
     );
 
   return (
-    <div className="h-full w-full max-w-6xl mx-auto">
+    <div className="min-h-full h-auto bg-stone-100">
+      <Header/>
+      <div className="h-full w-full max-w-5xl mx-auto">
       <div
         style={{
           backgroundImage: `url(http://localhost:5000/${course.currentCourse?.image})`,
@@ -120,6 +124,7 @@ export const Course = observer(() => {
             course.currentCourse.User?.lastName}
         </p>
       </div>
+    </div>
     </div>
   );
 });

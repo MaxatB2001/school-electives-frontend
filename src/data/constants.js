@@ -1,8 +1,7 @@
-export const HOME_ROUTE = "/";
-export const LOGIN_ROUTE = "/login";
+export const LOGIN_ROUTE = "/";
 export const USER_ROUTE = "/user";
 export const COURSE_ROUTE = "/course";
-export const COURSES_ROUTE = "/courses";
+export const COURSES_ROUTE = "/";
 export const week = [
   "Понедельник",
   "Вторник",
