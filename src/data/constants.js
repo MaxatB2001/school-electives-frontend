@@ -2,6 +2,7 @@ export const LOGIN_ROUTE = "/";
 export const USER_ROUTE = "/user";
 export const COURSE_ROUTE = "/course";
 export const COURSES_ROUTE = "/";
+export const TEST_ROUTE = "/tests"
 export const week = [
   "Понедельник",
   "Вторник",

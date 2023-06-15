@@ -22,7 +22,7 @@ export const Courses = observer(() => {
         // backgroundRepeat:"no-repeat",
       }} className="h-72">
       </div>
-      <div className="px-10 grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 auto-rows-fr gap-5 mt-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 auto-rows-fr gap-5 mt-5">
         {course.courses.map(c => 
           <CourseCard key={c.id} course={c}/>
         )}

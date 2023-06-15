@@ -101,13 +101,13 @@ export const Course = observer(() => {
           {course.currentCourse.about}
         </p>
       </div>
-      <div className="p-10 max-w-[70%] flex items-center justify-between">
+      <div className="p-10 max-w-[70%] ">
         <h2 className="text-4xl font-semibold font-arial">Для кого курс</h2>
-        <p className="text-lg font-medium">
+        <div className="text-lg font-medium">
           {`курс предназначен для учеников ${course.currentCourse.classOriented?.join(
             ", "
           )} классов`}
-        </p>
+        </div>
       </div>
       <div className="p-10 space-y-10">
         <h2 className="text-4xl font-semibold font-arial">Преподователь</h2>
